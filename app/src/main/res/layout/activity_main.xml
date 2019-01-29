@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="data"
+            type="com.example.anub.mvvmdemo.model.PostResponse"/>
+
+    </data>
+
+
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.anub.mvvmdemo.view.activity.MainActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:text="MVVM Demo"
+                app:title="MVVM Demo"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?actionBarSize"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/heading_text"
+                style="@style/textStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/m_margin"
+                android:layout_marginTop="@dimen/l_margin"
+                android:text="@{data.title}" />
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/textStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/m_margin"
+                android:layout_marginTop="@dimen/s_margin"
+                android:text="@{data.body}" />
+
+        </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+</layout>
+
+
+

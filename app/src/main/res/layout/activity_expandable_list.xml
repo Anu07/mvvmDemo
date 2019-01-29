@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:title="@string/app_name" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ExpandableListView
+            android:id="@+id/expandable_list_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="?actionBarSize"
+            android:divider="@android:color/black"
+            android:dividerHeight="0.5dp"
+            android:indicatorRight="?android:attr/expandableListPreferredItemIndicatorLeft" />
+
+        <TextView
+            android:id="@+id/expandable_stickyHeader_"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_gravity="start"
+            android:background="#80000000"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            tools:text="HEllo" />
+
+    </FrameLayout>
+
+</LinearLayout>
